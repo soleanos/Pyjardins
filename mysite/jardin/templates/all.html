@@ -1,0 +1,34 @@
+
+{% block content %}
+
+	<!doctype html>
+	<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Application  Jardin </title>
+		<link rel="stylesheet" href="/css/style.css">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h1>Liste des jardins </h1>
+		
+		{% for jardin in collectionJardin %}
+			
+			<p>
+				<a href="{% url 'details' jardin.code%}">
+				<b>Code : </b>
+				{{jardin.code}} 
+				
+				<br>
+				
+				<b>Adresse : </b>
+				{{jardin.adresse}} 
+				
+				<br>
+				
+				<b>Commentaire : </b>
+				{{jardin.commentaire}}
+			</p>
+		{% endfor %}
+	</body>
+{% endblock %}
