@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^$',views.index, name='index'),
     url(r'^catalogue/$',views.catalogue, name='catalogue'),
     url(r'^details/(?P<code>\w+)/',views.details, name='details'),
+    url(r'^modif/(?P<code>\w+)/',views.modif, name='modif'),
 ]

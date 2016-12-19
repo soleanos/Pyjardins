@@ -15,7 +15,7 @@
 		{% for jardin in collectionJardin %}
 			
 			<p>
-				<a href="{% url 'details' jardin.code%}">
+				
 				<b>Code : </b>
 				{{jardin.code}} 
 				
@@ -28,6 +28,10 @@
 				
 				<b>Commentaire : </b>
 				{{jardin.commentaire}}
+				
+					<a href="{% url 'details' jardin.code%}">Details</a>
+				<a href="{% url 'modif' jardin.code%}">Details</a>
+				
 			</p>
 		{% endfor %}
 	</body>
